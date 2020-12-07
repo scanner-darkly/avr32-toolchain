@@ -228,7 +228,7 @@ install-automake stamps/install-automake:  stamps/build-automake
 .PHONY: download-texinfo
 downloads/$(TEXINFO_ARCHIVE) download-texinfo:
 	[ -d downloads ] || mkdir downloads ;
-	cd downloads && curl -LO $(TEXINFO_URL)
+	cd downloads && curl -LO $(TEXINFO_URL) --insecure
 
 .PHONY: extract-texinfo
 extract-texinfo stamps/extract-texinfo: downloads/$(TEXINFO_ARCHIVE)
